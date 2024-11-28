@@ -49,7 +49,7 @@
             <!-- Line chart (Acme Professional) -->
             <DashboardCard03 />
             <!-- Bar chart (Direct vs Indirect) -->
-            <DashboardCard04 />
+            <CandidatosCard04 />
             <!-- Line chart (Real Time Value) -->
 
           </div>
@@ -73,7 +73,7 @@ import Datepicker from '../components/Datepicker.vue'
 import CandidatosCard01 from '../partials/candidatos/CandidatosCard01.vue'
 import DashboardCard02 from '../partials/dashboard/DashboardCard02.vue'
 import DashboardCard03 from '../partials/dashboard/DashboardCard03.vue'
-import DashboardCard04 from '../partials/dashboard/DashboardCard04.vue'
+import CandidatosCard04 from '../partials/candidatos/CandidatosCard04.vue'
 
 import Banner from '../partials/Banner.vue'
 
@@ -87,7 +87,7 @@ export default {
     CandidatosCard01,
     DashboardCard02,
     DashboardCard03,
-    DashboardCard04,
+    CandidatosCard04,
 
     Banner,
   },

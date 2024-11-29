@@ -5,4 +5,3 @@
 <script>
 import './charts/ChartjsConfig';
 </script>
-

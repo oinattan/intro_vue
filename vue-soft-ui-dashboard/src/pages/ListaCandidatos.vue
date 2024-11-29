@@ -34,15 +34,7 @@
 
           <!-- Cards -->
           <div class="grid grid-cols-12 gap-6">
-            <!-- Line chart (Acme Plus) -->
-            <CandidatosCard01 />
-            <!-- Line chart (Acme Advanced) -->
-            <DashboardCard02 />
-            <!-- Line chart (Acme Professional) -->
-            <DashboardCard03 />
-            <!-- Bar chart (Direct vs Indirect) -->
             <CandidatosCard04 />
-            <!-- Line chart (Real Time Value) -->
           </div>
         </div>
       </main>
@@ -64,7 +56,6 @@ import DashboardCard02 from '../partials/dashboard/DashboardCard02.vue'
 import DashboardCard03 from '../partials/dashboard/DashboardCard03.vue'
 import CandidatosCard04 from '../partials/candidatos/CandidatosCard04.vue'
 import Banner from '../partials/Banner.vue'
-import BarChart from '../charts/BarChart01.vue'
 
 export default {
   name: 'Candidatos',
@@ -73,38 +64,7 @@ export default {
     Header,
     FilterButton,
     Datepicker,
-    CandidatosCard01,
-    DashboardCard02,
-    DashboardCard03,
     CandidatosCard04,
-    Banner,
-    BarChart
   },
-  setup() {
-    const sidebarOpen = ref(false)
-    const chartData = ref({
-      labels: [],
-      datasets: []
-    })
-
-    // Método para buscar os dados do gráfico
-    const fetchChartData = async () => {
-      try {
-        const response = await axios.get('http://localhost:5173/api.php')
-        console.log(response.data) // Para ver os dados recebidos
-        chartData.value = response.data
-      } catch (error) {
-        console.error('Erro ao carregar os dados do gráfico', error)
-      }
-    }
-
-    // Chama a função para carregar os dados assim que o componente for montado
-    onMounted(fetchChartData)
-
-    return {
-      sidebarOpen,
-      chartData
-    }
-  }
 }
 </script>
